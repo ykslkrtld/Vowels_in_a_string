@@ -16,10 +16,14 @@ button.addEventListener("click", () => {
         }
     }
     sonuc.textContent = `Girdiğiniz dizide ${sum} adet ünlü harf vardır`
-
-    dizi.value = ""
-    dizi.focus()
+   
     sum = 0
+    setTimeout(() => {
+        dizi.focus()
+        dizi.value = "";
+        sonuc.textContent = "";
+        sonuc.visibility = "hidden";
+    }, 1500);
 })
 
 
