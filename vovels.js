@@ -2,7 +2,7 @@ const dizi = document.getElementById("text")
 const button = document.querySelector("button")
 const sonuc = document.querySelector(".sonuc")
 let sum = 0
-const unluler = "aeıioöuü"
+const unluler = "aeıioöuüAEIİOÖUÜ"
 
 window.onload = () => {
     dizi.focus()
@@ -24,6 +24,12 @@ button.addEventListener("click", () => {
         sonuc.textContent = "";
         sonuc.visibility = "hidden";
     }, 1500);
+})
+
+dizi.addEventListener("keydown", (e) => {
+    if(e.key === "Enter"){
+        button.click()
+    }
 })
 
 
