@@ -4,6 +4,10 @@ const sonuc = document.querySelector(".sonuc")
 let sum = 0
 const unluler = "aeıioöuü"
 
+window.onload = () => {
+    dizi.focus()
+}
+
 
 button.addEventListener("click", () => {
     for(let i = 0; i < dizi.value.length; i++){
@@ -12,6 +16,10 @@ button.addEventListener("click", () => {
         }
     }
     sonuc.textContent = `Girdiğiniz dizide ${sum} adet ünlü harf vardır`
+
+    dizi.value = ""
+    dizi.focus()
+    sum = 0
 })
 
 
